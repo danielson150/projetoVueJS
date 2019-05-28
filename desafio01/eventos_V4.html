@@ -3,8 +3,10 @@
 <div id='app'>
     <p>{{ contador }}</p>
     <button v-on:click="somar">Soma1</button>
-    <p v-on:mousemove="atualizarXY">Mouse: {{x}} e {{y}}</p>
-    <span>Isso está dentro da tag P</span>
+    <p v-on:mousemove="atualizarXY">Mouse: {{x}} e {{y}}
+        <span>Isso está dentro da tag P</span>
+    </p>
+    <a v-on:click.prevent="" href="https://www.google.com.br">Google</a>
 </div>
 
 <script>
