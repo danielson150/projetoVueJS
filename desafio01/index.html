@@ -1,0 +1,28 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<div id='desafio'>
+
+    <!-- Preencha a tag p abaixo com seu nome e idade usando interpolação -->
+    <p>{{nome}} - {{idade}} anos</p>
+
+    <!-- Exiba sua idade multiplicada por 3 -->
+    <p>{{ multiplicaIdade()}}</p>
+
+    <!-- Chame uma função para exibir um numero randomico(aleatório) -->
+    <!-- Utilize Math.random()-->
+    <p>{{aleatorio()}}</p>
+
+    <!--Inicialize o input com o seu nome-->
+    <!-- Use o atributo value -->
+    <input type="text" v-bind:value='nome'>
+
+    <!-- Procure uma imagem no google e exiba na tag img -->
+    <!-- fazendo bindig no atributo src-->
+    <div>
+        <img v-bind:src="link" alt="IROMAN" height="400">
+    </div>
+
+</div>
+
+<script src="app.js"></script>
