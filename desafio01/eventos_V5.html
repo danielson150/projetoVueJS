@@ -1,0 +1,40 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id='app'>
+    <p>{{ contador }}</p>
+    <button v-on:click="somar">Soma1</button>
+    <p v-on:mousemove="atualizarXY">Mouse: {{x}} e {{y}}
+        <span>Isso está dentro da tag P</span>
+    </p>
+    <a v-on:click.prevent="" href="https://www.google.com.br">Google</a>
+    <br> <br>
+    <input type="text" v-on:keydown.enter.alt="digitei">
+
+
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            contador: 0,
+            x: 0,
+            y: 0,
+        },
+
+        methods: {
+            somar() {
+                this.contador++
+            },
+            atualizarXY(event) {
+                this.x = event.clientX
+                this.y = event.clientY
+            },
+            digitei() {
+                alert('Acabei de digitar no input!')
+            }
+
+        },
+
+    })
+</script>
