@@ -2,7 +2,7 @@
 
 <div id="app">
     <ul>
-        <li v-for="pessoa in pessoas">
+        <li v-for="(pessoa, i) in pessoas" :key="i">
             <div v-for="(valor, chave, indice) in pessoa">
                 {{indice}} -- {{chave}} -- {{valor}}
             </div>
